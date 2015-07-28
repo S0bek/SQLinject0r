@@ -40,7 +40,7 @@ my %injection_codes = (
                       );
 
 sub usage {
-  die "Usage: $0 -s https://www.google.com/";
+  die "Usage: $0 -s https://www.google.com/\n";
 }
 
 sub inject {
@@ -66,10 +66,13 @@ sub inject {
 
   my $response = $ua->request($req);
 
+  #tests et resultats ici
+
 }
 
-if (defined $opts{s}) {
+if (defined($opts{s})) {
   inject($opts{s});
+  print "Fin du scan\n";
 } else {
   usage();
 }
